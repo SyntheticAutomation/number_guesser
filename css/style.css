@@ -1,0 +1,119 @@
+/* Spec Formatting
+
+Text: Open Sans, Bold 700, Light 300
+
+Header Background Color: #404041
+
+"Number" title color: #ED458B
+"Guesser" title color: #E6E7E8
+
+Guess button normal color: #929497
+Guess button disabled color: #D0D2D3
+Guess button hover color: #EB008B
+Guess button text color: #FFFFFF
+
+Last guess text color: #404041
+Last guess number color: #EB008B
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.header {
+    height: 20vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(64, 64, 65, 0.8),
+        rgb(0, 0, 0));
+    font-size: 36px;
+    background-size: cover;
+}
+
+.text-box {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.heading-primary {
+    backface-visibility: hidden;
+}
+
+.heading-primary-alpha {
+    color: #ED458B;
+    font-weight: 700;
+}
+
+.heading-primary-beta {
+    color: #E6E7E8;
+    font-weight: 300;
+}
+
+.guess-box {
+    padding-top: 50px;
+}
+
+.guess-input {
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    border: 1px solid #929497;
+    border-radius: 4px;
+    padding: 5px 5px;
+    font-size: 32px;
+    font-weight: 100;
+    color: #929497;
+}
+
+.primary-buttons {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.primary-buttons .btn {
+    padding: 5px;
+    width: 14%;
+    font-size: 28px;
+    font-weight: 100;
+}
+
+.btn {
+    background-color: #929497;
+    color: #FFFFFF;
+    border: 1px;
+    border-radius: 200px;
+}
+
+.btn-guess {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.btn-clear {
+    display: inline-block;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
