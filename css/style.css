@@ -88,13 +88,17 @@ body {
     width: 14%;
     font-size: 28px;
     font-weight: 100;
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
 }
 
 .btn {
     background-color: #929497;
     color: #FFFFFF;
+    outline: none;
     border: 1px;
     border-radius: 200px;
+    transition: all .2s;
 }
 
 .btn-guess {
@@ -106,6 +110,20 @@ body {
     display: inline-block;
 }
 
+
+.btn:hover {
+    transform: translateY(-3px);
+    background-color: #EB008B;
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+/* small click animation */
+.btn:active {
+    transform: translateY(-1px);
+    /* box-shadow uses values in order: x y blur shadowcolor */
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -115,5 +133,19 @@ body {
         opacity: 1;
     }
 }
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 
 
