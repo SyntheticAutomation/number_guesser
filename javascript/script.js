@@ -1,5 +1,5 @@
 function DisplayGuess() {
-    var show_number = document.getElementById('guess_field').value;
+    const show_number = document.getElementById('guess_field').value;
     document.getElementById('number-result').innerHTML = show_number;
 }
 
