@@ -1,0 +1,1 @@
+chose to not use ES6 arrow functions since i don't feel confident enough with JS yet to do shorthand

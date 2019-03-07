@@ -24,9 +24,13 @@
         <button class="btn btn-guess" id="guess-button">Guess</button>
         <button class="btn btn-clear" onclick="ClearInput()">Clear</button>
     </div>
-    <div class="response-section">
-        <span class="previous-guess-alpha">Your last guess was:</span>
-        <div id="number-result">
+    <div class="response-section" id="response">
+        <span class="previous-guess-alpha" id="previous-guess-text">
+            <script>
+                document.getElementById('guess-button').addEventListener('click', DisplayGuessText);
+            </script>
+        </span>
+        <div class="user-number-guess" id="number-result">
             <script>
                 // show their most recent guess here as an integer
                 document.getElementById('guess-button').addEventListener('click', DisplayGuess);
@@ -39,7 +43,7 @@
         </span>
     </div>
 
-    <input type="button" value="Reset">
+    <button class="btn btn-reset" onclick="ResetGame('response')">Reset</button>
     
 </body>
 </html>
