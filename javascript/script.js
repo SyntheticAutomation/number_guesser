@@ -51,8 +51,3 @@ function DisplayResponse() {
         ValidateInput();
     }
 }
-
-// function enable_buttons() {
-//     document.getElementById("clear-button").disabled = false;
-//     document.getElementById("reset-button").disabled = false;
-// }
