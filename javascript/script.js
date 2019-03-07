@@ -9,7 +9,6 @@ function ClearInput() {
 }
 
 var random_number = Math.floor(Math.random() * 100)
-console.log(random_number);
 
 function DisplayEvaluation() {
     var guessed_number = Number(document.getElementById('guess_field').value);
