@@ -6,6 +6,10 @@ $(document).ready(function() {
     $('#minimum_field, #maximum_field').keyup(function () {
         $('#range-button').prop('disabled', this.value == "" ? true : false);
     })
+    // $('#reset-button').click(function(){
+    //     alert('Game Reset!')
+    //     $("#game").load("#game > *");
+    // }) DOES NOTHING!!!!!!!!!!!!!!!!!!!!!!!! WTF!!!!
 });
 
 var random_number;
@@ -35,6 +39,11 @@ function DisplayEvaluation() {
             output = 'That is too low!';
         }
     document.getElementById("evaluation").innerHTML = output;
+
+    if (output == 'BOOM!') {
+        document.getElementById("number_change_warning").innerHTML = "Difficulty increased by 10. Try another guess";
+        IncreaseDifficulty();
+    };
 }
 
 function ValidateInput(min_value, max_value) {
@@ -61,11 +70,27 @@ function RespondtoRange() {
     max_value = document.getElementById('maximum_field').value
     // creates a random_number on range button click so that when someone presses guess button,
     //  the random number stays the same and can be passed to all functions.
-    random_number = Math.floor(Math.random() * max_value)
+    random_number = Math.floor(Math.random() * max_value);
     var output = (`Random Number Generated. Guess what it is, from ${Number(min_value)} to ${Number(max_value)}`);
     if (min_value > max_value) {
         output = "Error: Your range is invalid. Please try again.";
     }
     
     document.getElementById("range-text").innerHTML = output;
+}
+
+function IncreaseDifficulty() {
+    min_value = document.getElementById('minimum_field').value;
+    if (min_value > 10) {
+        min_value = min_value - 10;
+    }
+    max_value = document.getElementById('maximum_field').value + 10;
+    random_number = Math.floor(Math.random() * max_value);
+    var msg = (`Random Number Generated. Guess what it is, from ${Number(min_value)} to ${Number(max_value)}`);
+    if (min_value > max_value) {
+        msg = "Error: Your range is invalid. Please try again.";
+    }
+    
+    document.getElementById("range-text").innerHTML = msg;
+    
 }

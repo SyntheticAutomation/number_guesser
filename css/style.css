@@ -24,6 +24,7 @@ Last guess text color: #404041
 
 body {
     font-family: "Open Sans", sans-serif;
+    text-align: center;
 }
 
 .header {

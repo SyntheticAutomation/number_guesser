@@ -25,20 +25,23 @@
     </div>
     <span class="range-response" id="range-text"></span>
     <hr>
-    <div class="guess-box">
-        <input type="number" class="guess-input" placeholder="Enter your guess" id="guess_field">
-    </div>
-    <div class="primary-buttons">
-        <button class="btn btn-guess" id="guess-button" onclick="DisplayResponse()">Guess</button>
-        <button class="btn btn-clear" id="clear-button" onclick="ClearInput()" disabled>Clear</button>
-    </div>
-    <div class="response-section" id="response">
-        <span class="previous-guess-alpha" id="previous-guess-text"></span>
-        <div class="user-number-guess" id="number-result"></div>
-        <span class="previous-guess-beta" id="evaluation"></span>
-    </div>
-    <div class="reset-section">
-        <button class="btn btn-reset" id="reset-button" onclick="location.reload()" disabled>Reset</button>
+    <div id="game">
+        <div class="guess-box">
+            <input type="number" class="guess-input" placeholder="Enter your guess" id="guess_field">
+        </div>
+        <div class="primary-buttons">
+            <button class="btn btn-guess" id="guess-button" onclick="DisplayResponse()">Guess</button>
+            <button class="btn btn-clear" id="clear-button" onclick="ClearInput()" disabled>Clear</button>
+        </div>
+        <div class="response-section" id="response">
+            <span class="previous-guess-alpha" id="previous-guess-text"></span>
+            <div class="user-number-guess" id="number-result"></div>
+            <span class="previous-guess-beta" id="evaluation"></span>
+            <span class="number-change-warning" id="number_change_warning"></span>
+        </div>
+        <div class="reset-section">
+            <button class="btn btn-reset" id="reset-button" onclick="window.location.reload()" disabled>Reset</button>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="javascript/script.js"></script>
