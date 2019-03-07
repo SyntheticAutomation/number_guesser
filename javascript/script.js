@@ -1,3 +1,9 @@
+$(document).ready(function() {
+    $('#guess_field').keyup(function (){
+        $('#clear-button').prop('disabled', this.value == "" ? true : false);
+        $('#reset-button').prop('disabled', this.value == "" ? true : false);
+    })
+});
 
 function DisplayGuess() {
     var number = document.getElementById('guess_field').value;
@@ -44,5 +50,9 @@ function DisplayResponse() {
     else {
         ValidateInput();
     }
-
 }
+
+// function enable_buttons() {
+//     document.getElementById("clear-button").disabled = false;
+//     document.getElementById("reset-button").disabled = false;
+// }
