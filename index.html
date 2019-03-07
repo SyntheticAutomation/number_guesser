@@ -18,32 +18,20 @@
         </div>
     </header>
     <div class="guess-box">
-        <input type="number" name="Number Input" class="guess-input" placeholder="Enter your guess" id="guess_field">
+        <input type="number" class="guess-input" placeholder="Enter your guess" id="guess_field" min="0" max="100">
     </div>
     <div class="primary-buttons">
-        <button class="btn btn-guess" id="guess-button">Guess</button>
+        <button class="btn btn-guess" id="guess-button" onclick="DisplayResponse()">Guess</button>
         <button class="btn btn-clear" onclick="ClearInput()">Clear</button>
     </div>
     <div class="response-section" id="response">
-        <span class="previous-guess-alpha" id="previous-guess-text">
-            <script>
-                document.getElementById('guess-button').addEventListener('click', DisplayGuessText);
-            </script>
-        </span>
-        <div class="user-number-guess" id="number-result">
-            <script>
-                // show their most recent guess here as an integer
-                document.getElementById('guess-button').addEventListener('click', DisplayGuess);
-            </script>
-        </div>
-        <span class="previous-guess-beta" id="evaluation">
-            <script>
-                document.getElementById('guess-button').addEventListener('click', DisplayEvaluation);
-            </script>
-        </span>
+        <span class="previous-guess-alpha" id="previous-guess-text"></span>
+        <div class="user-number-guess" id="number-result"></div>
+        <span class="previous-guess-beta" id="evaluation"></span>
     </div>
-
-    <button class="btn btn-reset" onclick="ResetGame('response')">Reset</button>
+    <div class="reset-section">
+        <button class="btn btn-reset" onclick="location.reload()">Reset</button>
+    </div>
     
 </body>
 </html>

@@ -27,7 +27,22 @@ function DisplayEvaluation() {
     document.getElementById("evaluation").innerHTML = output;
 }
 
-function ResetGame(ID) {
-    document.getElementById(ID).innerHTML = "";
+function ValidateInput() {
+    var input = parseInt(document.getElementById("guess_field").value);
+    if (input < 1 || input > 100)
+    alert("Error: Number must be between 1-100.");
+    return;
+}
+
+function DisplayResponse() {
+    var input = parseInt(document.getElementById("guess_field").value);
+    if (input > 1 && input < 100) {
+        DisplayGuessText(); 
+        DisplayGuess(); 
+        DisplayEvaluation();
+    }
+    else {
+        ValidateInput();
+    }
 
 }
