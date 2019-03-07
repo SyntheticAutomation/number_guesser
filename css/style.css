@@ -9,11 +9,10 @@ Header Background Color: #404041
 
 Guess button normal color: #929497
 Guess button disabled color: #D0D2D3
-Guess button hover color: #EB008B
+Guess button hover color and last guess number color: #EB008B
 Guess button text color: #FFFFFF
 
 Last guess text color: #404041
-Last guess number color: #EB008B
 
 */
 
@@ -37,6 +36,7 @@ body {
     background-size: cover;
 }
 
+
 .text-box {
     position: absolute;
     top: 10%;
@@ -58,6 +58,50 @@ body {
 .heading-primary-beta {
     color: #E6E7E8;
     font-weight: 300;
+}
+
+.range-header {
+    padding: 25px;
+    font-size: 32px;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.min-max-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.min-max-box input {
+    width: 8%;
+    border: 1px solid #929497;
+    border-radius: 4px;
+    padding: 5px 5px;
+    font-size: 32px;
+    font-weight: 100;
+    color: #929497;
+    margin-right: 15px;
+}
+
+.range-response {
+    padding: 25px;
+    font-size: 32px;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-range {
+    padding: 5px;
+    width: 11%;
+    font-size: 28px;
+    font-weight: 100;
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
 }
 
 .guess-box {
