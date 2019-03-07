@@ -25,16 +25,16 @@
         <button class="btn btn-clear" onclick="ClearInput()">Clear</button>
     </div>
     <div class="response-section">
-        <span class="previous-guess-alpha">Your last guess was</span>
+        <span class="previous-guess-alpha">Your last guess was:</span>
         <div id="number-result">
-        <script>
-            // show their most recent guess here as an integer
-            document.getElementById('guess-button').addEventListener('click', DisplayGuess);
-        </script>
-        </div>
-        <span class="previous-guess-beta">
             <script>
-                // "That is too high" vs "That is too low" vs "You got it!" -- conditional logic print screen
+                // show their most recent guess here as an integer
+                document.getElementById('guess-button').addEventListener('click', DisplayGuess);
+            </script>
+        </div>
+        <span class="previous-guess-beta" id="evaluation">
+            <script>
+                document.getElementById('guess-button').addEventListener('click', DisplayEvaluation);
             </script>
         </span>
     </div>
